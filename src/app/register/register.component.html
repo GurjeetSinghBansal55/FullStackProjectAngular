@@ -1,0 +1,65 @@
+<!-- <div class="text-center">
+    {{message}}
+</div>
+<div class="container justify-content-center">
+    <form class="form-signin" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <h1 class="h3 mb-3 font-weight-normal">Please Register</h1>
+        <div class="form-group">
+            <label for="inputUsername" class="sr-only">Username</label>
+            <input type="text" id="inputUsername" [formControlName]="'username'" class="form-control" placeholder="Username" required="" autofocus="">
+        </div>
+        <div class="form-group">
+            <label for="inputfirstName" class="sr-only">First Name</label>
+            <input type="text" id="inputfirstName" [formControlName]="'firstName'" class="form-control" placeholder="FirstName" required="" autofocus="">
+        </div>
+        <div class="form-group">
+            <label for="inputLastName" class="sr-only">Last Name</label>
+            <input type="text" id="inputLastName" [formControlName]="'lastName'" class="form-control" placeholder="LastName" required="" autofocus="">
+        </div>
+        <div class="form-group">
+            <label for="age" class="sr-only">Age</label>
+            <input type="number" id="age" [formControlName]="'age'" class="form-control" placeholder="age" required="" autofocus="">
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" [formControlName]="'password'" class="form-control" placeholder="Password" required="" autofocus="">
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Signup</button>
+    </form>
+</div> -->
+<div>
+    <h3>{{message}}</h3>
+</div>
+<div class="container">
+    <div class="row"></div>
+    <div class="col-lg-12 col-sm-12 colxs-12">
+        <h4 class="mt-4 mb-4">Registration Form</h4>
+         <form>
+             <fieldset>
+                 <div class="form-group">
+                     <label for="username">Username</label><br>
+                     <input type="text" class="form-control" name="username" [(ngModel)]="user.username" id="username" placeholder="Enter your username" required>
+                     <br> </div>
+                 <div class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" class="form-control" name="firstname" [(ngModel)]="user.firstname" id="firstname" placeholder="Enter your first name" required>
+                    <br></div>
+                <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="form-control" name="lastname" [(ngModel)]="user.lastname" id="lastname" placeholder="Enter your last name" required>
+                    <br></div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <br><input type="text" class="form-control" name="age" [(ngModel)]="user.age" id="age" placeholder="Enter your age" required>
+                    <br></div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <br><input type="password" class="form-control" name="password" [(ngModel)]="user.password" id="password" placeholder="Enter your password" required>
+                    <br></div>
+                <div class="form-group">
+                    <input type="submit" name="submit" class="btn btn-success" (click)="registerNow()" value="register">
+                </div>
+             </fieldset>
+         </form>
+    </div>
+</div>
